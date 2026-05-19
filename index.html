@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Motion Portfolio</title>
+    <meta name="description" content="A motion-led portfolio prototype with cursor reveals, page transitions, and project hover films.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310100e'/%3E%3Cpath d='M14 46 24 14l8 20 8-20 10 32h-8l-3-11-7 15-7-15-3 11z' fill='%23c8ff2d'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader__meter"></div>
+      <p class="loader__text">loading reel</p>
+    </div>
+
+    <div class="page-wipe" aria-hidden="true">
+      <span class="page-wipe__label">work</span>
+    </div>
+
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__ring"></div>
+      <div class="cursor__dot"></div>
+      <div class="cursor__label"></div>
+    </div>
+
+    <div class="cursor-reel" aria-hidden="true">
+      <video src="play_1080p.mp4" muted loop playsinline></video>
+    </div>
+
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a class="brand magnetic" href="#home" data-transition="home">Kinetic Portfolio</a>
+      <button class="nav-toggle magnetic" type="button" aria-expanded="false" aria-controls="site-menu" data-cursor="menu">
+        <span>Menu</span>
+        <span class="nav-toggle__mark"></span>
+      </button>
+      <a class="talk magnetic" href="mailto:hello@example.com" data-cursor="email">hello@example.com</a>
+    </nav>
+
+    <nav class="bottom-nav" aria-label="Status">
+      <span>Design / Motion / Web</span>
+      <span class="clock">IST 00:00</span>
+    </nav>
+
+    <div class="menu" id="site-menu" aria-hidden="true">
+      <div class="menu__inner">
+        <a href="#home" data-transition="home">Home</a>
+        <a href="#work" data-transition="work">Work</a>
+        <a href="#motion" data-transition="motion">Motion</a>
+        <a href="#contact" data-transition="contact">Contact</a>
+      </div>
+    </div>
+
+    <main id="home">
+      <section class="hero magnet-zone section-band" data-theme="electric">
+        <div class="hero__copy">
+          <p class="mono reveal-line">Portfolio experience</p>
+          <h1 aria-label="I design motion rich digital worlds">
+            <span class="word-mask"><span>I design</span></span>
+            <span class="word-mask"><span>motion rich</span></span>
+            <span class="word-mask"><span>digital worlds</span></span>
+          </h1>
+        </div>
+        <div class="hero__meta reveal-line">
+          <span>Available for brand sites, portfolio systems, and kinetic interfaces.</span>
+          <span>Scroll</span>
+        </div>
+        <figure class="hero-card" aria-hidden="true">
+          <video src="Global Digital Agency.mp4" muted loop playsinline autoplay></video>
+        </figure>
+      </section>
+
+      <section class="intro section-band" aria-labelledby="intro-heading">
+        <p class="mono reveal-line" id="intro-heading">Method</p>
+        <p class="intro__text">
+          Not just pages. A portfolio should
+          <span class="burst-word" data-cursor="reveal">react</span>
+          , fold, stretch, and
+          <span class="burst-word is-second" data-cursor="play">reveal</span>
+          the next thought with a little tension.
+        </p>
+      </section>
+
+      <section class="work section-band" id="work" aria-labelledby="work-heading">
+        <div class="section-head">
+          <p class="mono reveal-line" id="work-heading">Selected work</p>
+          <a class="small-link magnetic" href="#contact" data-transition="contact" data-cursor="start">Start a project</a>
+        </div>
+
+        <div class="work-grid">
+          <article class="project-tile" data-cursor="watch">
+            <video src="NeoLeaf.mp4" muted loop playsinline></video>
+            <div class="project-tile__copy">
+              <p>01</p>
+              <h2>NeoLeaf</h2>
+              <span>Identity film / web launch</span>
+            </div>
+          </article>
+
+          <article class="project-tile is-alt" data-cursor="watch">
+            <video src="Holocene.mp4" muted loop playsinline></video>
+            <div class="project-tile__copy">
+              <p>02</p>
+              <h2>Holocene</h2>
+              <span>Editorial system / art direction</span>
+            </div>
+          </article>
+
+          <article class="project-tile" data-cursor="watch">
+            <video src="066f65d4-9b3d-4d9a-afb8-d4a12749bc94_1080_hd.mp4" muted loop playsinline></video>
+            <div class="project-tile__copy">
+              <p>03</p>
+              <h2>Pulse Lab</h2>
+              <span>Motion identity / product story</span>
+            </div>
+          </article>
+
+          <article class="project-tile is-alt" data-cursor="watch">
+            <video src="afd3ded0-677e-446d-923a-c825493b5d63_1080_hd.mp4" muted loop playsinline></video>
+            <div class="project-tile__copy">
+              <p>04</p>
+              <h2>Soft Circuit</h2>
+              <span>Visual language / launch page</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="motion section-band" id="motion" aria-labelledby="motion-heading">
+        <div class="section-head">
+          <p class="mono reveal-line" id="motion-heading">Motion stack</p>
+          <span class="mono">hover the rows</span>
+        </div>
+        <div class="service-list">
+          <button class="service-row" type="button" data-cursor="aim">
+            <span>Cursor reveals</span>
+            <span class="service-row__secret">preview cards, masked text, moving media</span>
+          </button>
+          <button class="service-row" type="button" data-cursor="aim">
+            <span>Page changes</span>
+            <span class="service-row__secret">slanted wipes, staggered links, scroll landings</span>
+          </button>
+          <button class="service-row" type="button" data-cursor="aim">
+            <span>Project motion</span>
+            <span class="service-row__secret">rotating entries, hover video, soft parallax</span>
+          </button>
+          <button class="service-row" type="button" data-cursor="aim">
+            <span>Text rhythm</span>
+            <span class="service-row__secret">line masks, delayed words, editorial pacing</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="gallery section-band" aria-label="Visual fragments">
+        <div class="gallery-strip">
+          <img src="pexels-blackben-33635624.jpg" alt="">
+          <img src="pexels-cottonbro-10385223.jpg" alt="">
+          <img src="pexels-theonlyabdulla-33393715.jpg" alt="">
+          <img src="pexels-yankrukov-9072300.jpg" alt="">
+          <img src="pexels-umudicreative-31862217.jpg" alt="">
+        </div>
+      </section>
+
+      <section class="contact section-band" id="contact" aria-labelledby="contact-heading">
+        <p class="mono reveal-line">Contact</p>
+        <h2 id="contact-heading">
+          <span class="word-mask"><span>Let’s build</span></span>
+          <span class="word-mask"><span>a living portfolio.</span></span>
+        </h2>
+        <a class="contact-link magnetic" href="mailto:hello@example.com" data-cursor="email">hello@example.com</a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
