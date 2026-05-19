@@ -33,6 +33,17 @@ Open `http://localhost:8000`.
 
 Project videos (`.mp4`) and Pexels-sourced stills sit at repo root. Replace freely.
 
+## Deploy (Vercel)
+
+Static site, no build step. Push to GitHub, import in Vercel dashboard, framework preset = "Other". `vercel.json` handles cache headers; `.vercelignore` skips unused media (~55MB saving).
+
+CLI alt:
+
+```bash
+npm i -g vercel
+vercel
+```
+
 ## License
 
 Prototype — no license. Ask before reuse.
